@@ -24,6 +24,7 @@ public class PopupMenuCustomizerUsingStrings implements PopupMenuCustomizer {
         fListener = listener;
     }
 
+    @Override
     public void customizePopup(JPopupMenu popup) {
         popup.removeAll();
         for (String menuString : fMenuItemStrings) {

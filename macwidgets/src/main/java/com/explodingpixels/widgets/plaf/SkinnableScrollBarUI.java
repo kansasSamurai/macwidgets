@@ -381,6 +381,7 @@ public class SkinnableScrollBarUI extends BasicScrollBarUI {
             iScrollDirection = scrollDirection;
         }
 
+        @Override
         public void mousePressed(MouseEvent e) {
             if (scrollbar.isEnabled() && SwingUtilities.isLeftMouseButton(e)) {
                 scrollByUnit(iScrollDirection);
@@ -391,6 +392,7 @@ public class SkinnableScrollBarUI extends BasicScrollBarUI {
             }
         }
 
+        @Override
         public void mouseReleased(MouseEvent e) {
             scrollTimer.stop();
             scrollbar.setValueIsAdjusting(false);

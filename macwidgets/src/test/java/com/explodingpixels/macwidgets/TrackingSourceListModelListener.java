@@ -14,40 +14,47 @@ public class TrackingSourceListModelListener implements SourceListModelListener 
     private SourceListItem fItemAddedOrRemoved;
     private SourceListItem fItemAddedToOrRemovedFrom;
 
+    @Override
     public void categoryAdded(SourceListCategory category, int index) {
         fWasCategoryAddedCalled = true;
         fCategoryAddedOrRemoved = category;
     }
 
+    @Override
     public void categoryRemoved(SourceListCategory category) {
         fWasCategoryRemovedCalled = true;
         fCategoryAddedOrRemoved = category;
     }
 
+    @Override
     public void itemAddedToCategory(SourceListItem item, SourceListCategory category, int index) {
         fWasItemAddedToCategoryCalled = true;
         fItemAddedOrRemoved = item;
         fCategoryAddedToOrRemovedFrom = category;
     }
 
+    @Override
     public void itemRemovedFromCategory(SourceListItem item, SourceListCategory category) {
         fWasItemRemovedFromCategoryCalled = true;
         fItemAddedOrRemoved = item;
         fCategoryAddedToOrRemovedFrom = category;
     }
 
+    @Override
     public void itemAddedToItem(SourceListItem item, SourceListItem parentItem, int index) {
         fWasItemAddedToItemCalled = true;
         fItemAddedOrRemoved = item;
         fItemAddedToOrRemovedFrom = parentItem;
     }
 
+    @Override
     public void itemRemovedFromItem(SourceListItem item, SourceListItem parentItem) {
         fWasItemRemovedToItemCalled = true;
         fItemAddedOrRemoved = item;
         fItemAddedToOrRemovedFrom = parentItem;
     }
 
+    @Override
     public void itemChanged(SourceListItem item) {
     }
 

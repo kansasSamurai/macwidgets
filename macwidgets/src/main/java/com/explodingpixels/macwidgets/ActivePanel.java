@@ -75,6 +75,7 @@ public class ActivePanel extends JPanel
         WindowUtils.installJComponentRepainterOnWindowFocusChanged(this);
 	}
 	
+        @Override
 	public void paint(Graphics g) 
 	{
 		boolean containedInActiveWindow = WindowUtils.isParentWindowFocused(this);

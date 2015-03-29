@@ -153,6 +153,7 @@ public class EPTabbedPaneUI extends BasicTabbedPaneUI {
 
     private ContainerListener createContainerListener() {
         return new ContainerAdapter() {
+            @Override
             public void componentAdded(ContainerEvent e) {
                 Component componentAdded = e.getChild();
                 fLayoutManager.forceTabWidth(componentAdded, SMALLEST_TAB_WIDTH);
@@ -163,6 +164,7 @@ public class EPTabbedPaneUI extends BasicTabbedPaneUI {
 
     private PropertyChangeListener createTabCloseListenerPropertyChangeListener() {
         return new PropertyChangeListener() {
+            @Override
             public void propertyChange(PropertyChangeEvent evt) {
                 doExtractTabCloseProperty();
             }
@@ -178,6 +180,7 @@ public class EPTabbedPaneUI extends BasicTabbedPaneUI {
 
     private PropertyChangeListener createCloseButtonLocationPropertyChangeListener() {
         return new PropertyChangeListener() {
+            @Override
             public void propertyChange(PropertyChangeEvent evt) {
                 doExtractCloseButtonLocationProperty();
             }
@@ -247,6 +250,7 @@ public class EPTabbedPaneUI extends BasicTabbedPaneUI {
 
     private MacWidgetsPainter<Component> createContentBorderTopEdgeBackgroundPainter() {
         return new MacWidgetsPainter<Component>() {
+            @Override
             public void paint(Graphics2D graphics, Component objectToPaint, int width, int height) {
                 Paint paint = new GradientPaint(0, 0, Color.WHITE, 0, height - 1, new Color(0xf8f8f8));
                 graphics.setPaint(paint);
@@ -338,6 +342,7 @@ public class EPTabbedPaneUI extends BasicTabbedPaneUI {
 
     private ActionListener createTabAddedAnimation(final Component tabComponentAdded) {
         return new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 int currentTabWidth = fLayoutManager.getTabWidth(tabComponentAdded);
                 int newTabWidth = Math.min(currentTabWidth + TAB_ANIMATION_DELTA, fCurrentDefaultTabWidth);
@@ -353,6 +358,7 @@ public class EPTabbedPaneUI extends BasicTabbedPaneUI {
 
     private ActionListener createTabRemovedAnimation(final Component tabComponentToClose) {
         return new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 int currentTabWidth = fLayoutManager.getTabWidth(tabComponentToClose);
                 int newTabWidth = Math.max(currentTabWidth - TAB_ANIMATION_DELTA, SMALLEST_TAB_WIDTH);
@@ -395,6 +401,7 @@ public class EPTabbedPaneUI extends BasicTabbedPaneUI {
             return forcedTabWidth == null ? fCurrentDefaultTabWidth : forcedTabWidth;
         }
 
+        @Override
         protected void calculateTabRects(int tabPlacement, int tabCount) {
             Insets tabAreaInsets = getTabAreaInsets(tabPlacement);
             int currentX = tabAreaInsets.left;
@@ -474,10 +481,12 @@ public class EPTabbedPaneUI extends BasicTabbedPaneUI {
 
     private static class DefaultTabCloseListener implements TabCloseListener {
 
+        @Override
         public boolean tabAboutToBeClosed(int tabIndex) {
             return true;
         }
 
+        @Override
         public void tabClosed(String title, Component component) {
             // no implementation.
         }

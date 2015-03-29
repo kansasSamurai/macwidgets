@@ -51,6 +51,7 @@ public class ButtonStatePainter<B extends AbstractButton>
         fSelectedPainter = selectedPainter;
     }
 
+    @Override
     public void paint(Graphics2D g, B button, int width, int height) {
 
         if (button.getModel().isRollover()) {
@@ -71,6 +72,7 @@ public class ButtonStatePainter<B extends AbstractButton>
      * An implementation of {@link MacWidgetsPainter} that does no painting.
      */
     public static class DummyPainter implements MacWidgetsPainter<Component> {
+        @Override
         public void paint(Graphics2D g, Component component, int width, int height) {
             // do nothing.
         }

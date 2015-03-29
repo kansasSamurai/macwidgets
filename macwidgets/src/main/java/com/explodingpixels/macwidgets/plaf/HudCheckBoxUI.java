@@ -92,6 +92,7 @@ public class HudCheckBoxUI extends BasicCheckBoxUI {
         		fontColor = WidgetBaseColors.LIGHT_FONT_COLOR;
         }
 
+        @Override
 		public void paintIcon(Component c, Graphics g, int x, int y) {
 
             AbstractButton button = (AbstractButton) c;
@@ -139,10 +140,12 @@ public class HudCheckBoxUI extends BasicCheckBoxUI {
             graphics.drawLine(x2, y2, x3, y3);
         }
 
+        @Override
         public int getIconWidth() {
             return CHECK_BOX_SIZE;
         }
 
+        @Override
         public int getIconHeight() {
             return CHECK_BOX_SIZE;
         }

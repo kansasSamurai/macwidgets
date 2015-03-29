@@ -125,6 +125,7 @@ public class PopupButton<E> {
 
 	private ActionListener createButtonListener() {
 		return new ActionListener() {
+                        @Override
 			public void actionPerformed(ActionEvent e) {
 
 				// grab the right most location of the button.
@@ -179,6 +180,7 @@ public class PopupButton<E> {
 
 	private ActionListener createMenuItemListener(final E item) {
 		return new ActionListener() {
+                        @Override
 			public void actionPerformed(ActionEvent e) {
 				setSelectedItem(item);
 			}

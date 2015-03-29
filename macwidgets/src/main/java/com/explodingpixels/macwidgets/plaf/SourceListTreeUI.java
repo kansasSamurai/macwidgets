@@ -326,6 +326,7 @@ public class SourceListTreeUI extends BasicTreeUI {
 
     private Action createNextAction() {
         return new AbstractAction() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 int selectedRow = tree.getLeadSelectionRow();
                 int rowToSelect = selectedRow + 1;
@@ -343,6 +344,7 @@ public class SourceListTreeUI extends BasicTreeUI {
 
     private Action createPreviousAction() {
         return new AbstractAction() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 int selectedRow = tree.getLeadSelectionRow();
                 int rowToSelect = selectedRow - 1;
@@ -407,10 +409,12 @@ public class SourceListTreeUI extends BasicTreeUI {
 
     private class CustomTreeModelListener implements TreeModelListener {
 
+        @Override
         public void treeNodesChanged(TreeModelEvent e) {
             // no implementation.
         }
 
+        @Override
         public void treeNodesInserted(TreeModelEvent e) {
             TreePath path = e.getTreePath();
             Object root = tree.getModel().getRoot();
@@ -422,10 +426,12 @@ public class SourceListTreeUI extends BasicTreeUI {
             }
         }
 
+        @Override
         public void treeNodesRemoved(TreeModelEvent e) {
             // no implementation.
         }
 
+        @Override
         public void treeStructureChanged(TreeModelEvent e) {
             // no implementation.
         }
@@ -439,6 +445,7 @@ public class SourceListTreeUI extends BasicTreeUI {
 
         private ItemTreeCellRenderer iItemRenderer = new ItemTreeCellRenderer();
 
+        @Override
         public Component getTreeCellRendererComponent(
                 JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int row,
                 boolean hasFocus) {
@@ -460,6 +467,7 @@ public class SourceListTreeUI extends BasicTreeUI {
         private CategoryTreeCellRenderer() {
         }
 
+        @Override
         public Component getTreeCellRendererComponent(
                 JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int row,
                 boolean hasFocus) {
@@ -496,6 +504,7 @@ public class SourceListTreeUI extends BasicTreeUI {
             fBuilder.getPanel().setOpaque(false);
         }
 
+        @Override
         public Component getTreeCellRendererComponent(
                 JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int row,
                 boolean hasFocus) {

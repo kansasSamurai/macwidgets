@@ -57,11 +57,13 @@ public class TrackingSpacer extends JComponent {
     public enum TrackingDimension {
         WIDTH {
             // return a Dimension based on the given components width dimension.
+            @Override
             Dimension createDimension(JComponent component, int delta) {
                 return new Dimension(component.getWidth() + delta, 1);
             }},
         HEIGHT {
             // return a Dimension based on the given components height dimension.
+            @Override
             Dimension createDimension(JComponent component, int delta) {
                 return new Dimension(1, component.getHeight() + delta);
             }};

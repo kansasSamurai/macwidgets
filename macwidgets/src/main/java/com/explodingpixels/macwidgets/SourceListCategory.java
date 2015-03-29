@@ -54,6 +54,7 @@ public class SourceListCategory implements TextProvider {
      *
      * @return the category text.
      */
+    @Override
     public String getText() {
         return fText;
     }

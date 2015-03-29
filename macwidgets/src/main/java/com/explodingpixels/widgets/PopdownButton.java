@@ -116,16 +116,19 @@ public class PopdownButton {
     private PopupMenuListener createPopupMenuListener() {
         return new PopupMenuListener() {
 
+            @Override
             public void popupMenuWillBecomeVisible(PopupMenuEvent e) {
                 fPopupMenuCustomizer.customizePopup(fPopupMenu);
             }
 
+            @Override
             public void popupMenuWillBecomeInvisible(PopupMenuEvent e) {
                 // make sure the button accuratley reflects the visibility of
                 // the popup menu.
                 fButton.setSelected(false);
             }
 
+            @Override
             public void popupMenuCanceled(PopupMenuEvent e) {
                 // no implementation.
             }

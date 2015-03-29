@@ -85,6 +85,7 @@ public class ImageButton extends JButton {
         return image;
     }
 
+    @Override
     public Icon getIcon() {
         return WindowUtils.isParentWindowFocused(this) || fInactiveIcon == null
                 ? super.getIcon() : fInactiveIcon;

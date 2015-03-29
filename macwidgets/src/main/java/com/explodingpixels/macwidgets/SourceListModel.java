@@ -193,6 +193,7 @@ public final class SourceListModel {
 
     private PropertyChangeListener createSourceListItemListener() {
         return new PropertyChangeListener() {
+            @Override
             public void propertyChange(PropertyChangeEvent event) {
                 SourceListItem item = (SourceListItem) event.getSource();
                 fireItemChanged(item);

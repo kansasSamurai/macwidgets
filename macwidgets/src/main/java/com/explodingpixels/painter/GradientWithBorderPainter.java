@@ -23,6 +23,7 @@ public class GradientWithBorderPainter implements MacWidgetsPainter<Component> {
         fBottomGradientColor = bottomGradientColor;
     }
 
+    @Override
     public void paint(Graphics2D g, Component object, int width, int height) {
         // create the paint - start the gradient one pixel from the top
         // of the component and finish the gradient one pixel from the

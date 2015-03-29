@@ -99,6 +99,7 @@ public class ScrollThumbImagePainter implements MacWidgetsPainter<Component> {
         return retVal;
     }
 
+    @Override
     public void paint(Graphics2D graphics, Component objectToPaint, int width, int height) {
 
         ImageSet imageSet = getImageSet(objectToPaint);

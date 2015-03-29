@@ -156,6 +156,7 @@ public class HudSliderUI extends BasicSliderUI {
      */
     private static HudPaintingUtils.ShapeProvider createCircularSliderKnobShapeProvider() {
         return new HudPaintingUtils.ShapeProvider() {
+            @Override
             public Shape createShape(double x, double y, double width, double height) {
                 return new Ellipse2D.Double(x, y, width, height);
             }
@@ -176,6 +177,7 @@ public class HudSliderUI extends BasicSliderUI {
      */
     private static HudPaintingUtils.ShapeProvider createPointedSliderKnobShapeProvider() {
         return new HudPaintingUtils.ShapeProvider() {
+            @Override
             public Shape createShape(double x, double y, double width, double height) {
                 float xFloat = (float) x;
                 float yFloat = (float) y;

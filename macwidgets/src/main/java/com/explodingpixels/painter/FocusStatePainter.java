@@ -79,6 +79,7 @@ public class FocusStatePainter implements MacWidgetsPainter<Component> {
 
 	}
 
+        @Override
 	public void paint(Graphics2D g, Component component, int width, int height) {
 		MacWidgetsPainter<Component> painterToUse;
 

@@ -146,12 +146,15 @@ public class EPTabPainter {
     public enum CloseButtonLocation {
 
         LEFT {
+            @Override
             int calculateCloseButtonX(Rectangle tabBounds, int closeButtonWidth) {
                 return tabBounds.x + CLOSE_BUTTON_DISTANCE_FROM_EDGE;
             }
+            @Override
             int calculateContentX(Rectangle tabBounds, int closeButtonWidth) {
                 return tabBounds.x + calculateWidthRequiredForCloseButton(closeButtonWidth);
             }
+            @Override
             int adjustXToPreventEncroachment(Rectangle tabBounds, int closeButtonWidth, Rectangle contentBounds) {
                 int closeButtonX = calculateCloseButtonX(tabBounds, closeButtonWidth);
                 int closeButtonXWithPad = closeButtonX + closeButtonWidth + CLOSE_BUTTON_DISTANCE_FROM_CONTENT;
@@ -159,12 +162,15 @@ public class EPTabPainter {
             }
         },
         RIGHT {
+            @Override
             int calculateCloseButtonX(Rectangle tabBounds, int closeButtonWidth) {
                 return tabBounds.x + tabBounds.width - CLOSE_BUTTON_DISTANCE_FROM_CONTENT - closeButtonWidth;
             }
+            @Override
             int calculateContentX(Rectangle tabBounds, int closeButtonWidth) {
                 return tabBounds.x + CONTENT_DISTANCE_FROM_EDGE;
             }
+            @Override
             int adjustXToPreventEncroachment(Rectangle tabBounds, int closeButtonWidth, Rectangle contentBounds) {
                 int closeButtonX = calculateCloseButtonX(tabBounds, closeButtonWidth);
                 int closeButtonXWithPad = closeButtonX - CLOSE_BUTTON_DISTANCE_FROM_CONTENT;
@@ -206,14 +212,17 @@ public class EPTabPainter {
         private ImageIcon fOver = createImageIcon("close_over.png");
         private ImageIcon fPressed = createImageIcon("close_pressed.png");
 
+        @Override
         public int getWidth() {
             return fSelected.getIconWidth();
         }
 
+        @Override
         public int getHeight() {
             return fSelected.getIconHeight();
         }
 
+        @Override
         public ImageIcon getImageIcon(boolean isSelected, boolean isOver, boolean isPressed) {
             ImageIcon closeImageIcon;
 

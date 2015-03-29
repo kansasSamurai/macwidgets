@@ -18,6 +18,7 @@ public class MacPainterFactory {
             private Color TOP_GRADIENT_COLOR = new Color(0xdbdbdb);
             private Color BOTTOM_GRADIENT_COLOR = new Color(0xbbbbbb);
 
+            @Override
             public void paint(Graphics2D graphics2D, Component component,
                               int width, int height) {
                 paintLeopardGradientSelection(
@@ -34,6 +35,7 @@ public class MacPainterFactory {
             private Color TOP_GRADIENT_COLOR = new Color(0xc4c4c4);
             private Color BOTTOM_GRADIENT_COLOR = new Color(0x959595);
 
+            @Override
             public void paint(Graphics2D graphics2D, Component component,
                               int width, int height) {
                 paintLeopardGradientSelection(
@@ -50,6 +52,7 @@ public class MacPainterFactory {
             private Color TOP_GRADIENT_COLOR = new Color(0xc2cfdd);
             private Color BOTTOM_GRADIENT_COLOR = new Color(0x7d93b2);
 
+            @Override
             public void paint(Graphics2D graphics2D, Component component,
                               int width, int height) {
                 paintLeopardGradientSelection(
@@ -67,6 +70,7 @@ public class MacPainterFactory {
             private Color TOP_GRADIENT_COLOR = new Color(0xa6b7cb);
             private Color BOTTOM_GRADIENT_COLOR = new Color(0x536b90);
 
+            @Override
             public void paint(Graphics2D graphics2D, Component component,
                               int width, int height) {
                 paintLeopardGradientSelection(
@@ -133,6 +137,7 @@ public class MacPainterFactory {
             private Color INACTIVE_TOP_GRADIENT_COLOR = new Color(0xe4e4e4);
             private Color INACTIVE_BOTTOM_GRADIENT_COLOR = new Color(0xd1d1d1);
 
+            @Override
             public void paint(Graphics2D graphics2D, Component component, int width, int height) {
                 boolean containedInActiveWindow = WindowUtils.isParentWindowFocused(component);
 

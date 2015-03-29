@@ -160,6 +160,7 @@ public class ComponentBottomBar extends TriAreaComponent {
 
         // MouseMotionListener implementation /////////////////////////////////////////////////////
 
+        @Override
         public void mouseDragged(MouseEvent e) {
             MouseEvent convertedEvent =
                     SwingUtilities.convertMouseEvent(fSplitterHandle, e, fSplitPane);
@@ -170,6 +171,7 @@ public class ComponentBottomBar extends TriAreaComponent {
             fSplitPane.setDividerLocation(boundedNewLocation);
         }
 
+        @Override
         public void mouseMoved(MouseEvent e) {
         }
     }   

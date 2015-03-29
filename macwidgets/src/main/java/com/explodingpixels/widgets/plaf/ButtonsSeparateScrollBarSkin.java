@@ -76,22 +76,27 @@ public class ButtonsSeparateScrollBarSkin implements ScrollBarSkin {
 
     // ScrollBarSkin implementation. //////////////////////////////////////////////////////////////
 
+    @Override
     public Dimension getMinimumThumbSize() {
         return fMinimumThumbSize;
     }
 
+    @Override
     public Dimension getPreferredSize() {
         return fPreferredSize;
     }
 
+    @Override
     public Rectangle getScrollThumbBounds() {
         return fThumb.getBounds();
     }
 
+    @Override
     public Rectangle getTrackBounds() {
         return fThumbContainer.getBounds();
     }
 
+    @Override
     public void installComponents(JScrollBar scrollBar) {
         // add the components to the scrollbar. order matters here - components added first, are
         // drawn last (on top).
@@ -105,6 +110,7 @@ public class ButtonsSeparateScrollBarSkin implements ScrollBarSkin {
         fThumbContainer.add(fThumb);
     }
 
+    @Override
     public void layoutTrackOnly(JScrollBar scrollBar, ScrollBarOrientation orientation) {
         fIncrementButton.setBounds(EMPTY_BOUNDS);
         fDecrementButton.setBounds(EMPTY_BOUNDS);
@@ -114,6 +120,7 @@ public class ButtonsSeparateScrollBarSkin implements ScrollBarSkin {
         fTrack.setBounds(0, 0, r.width, r.height);
     }
 
+    @Override
     public void layoutEverything(JScrollBar scrollBar, ScrollBarOrientation orientation) {
         // 1) layout the scrollbar buttons.
         int incrementButtonHeight = orientation.getLength(fIncrementButton.getPreferredSize());
@@ -143,12 +150,14 @@ public class ButtonsSeparateScrollBarSkin implements ScrollBarSkin {
         fThumbContainer.setBounds(trackAndThumbBounds);
     }
 
+    @Override
     public void installMouseListenersOnButtons(MouseListener decrementMoustListener,
                                                MouseListener incrementMouseListener) {
         fDecrementButton.addMouseListener(decrementMoustListener);
         fIncrementButton.addMouseListener(incrementMouseListener);
     }
 
+    @Override
     public void setScrollThumbBounds(Rectangle bounds) {
         fThumb.setBounds(bounds);
     }

@@ -17,27 +17,33 @@ public enum ScrollBarOrientation {
 
     HORIZONTAL {
 
+        @Override
         int getThickness(Dimension size) {
             return size.height;
         }
 
+        @Override
         int getLength(Dimension size) {
             return size.width;
         }
 
+        @Override
         int getPosition(Point point) {
             return point.x;
         }
 
+        @Override
         Rectangle updateBoundsPosition(Rectangle bounds, int newPosition) {
             bounds.setLocation(newPosition, bounds.y);
             return bounds;
         }
 
+        @Override
         Rectangle createBounds(Component container, int position, int length) {
             return new Rectangle(position, 0, length, container.getHeight());
         }
 
+        @Override
         Rectangle createCenteredBounds(Component container, int position, int thickness, int length) {
             int y = container.getHeight() / 2 - thickness / 2;
             return new Rectangle(position, y, length, thickness);
@@ -46,27 +52,33 @@ public enum ScrollBarOrientation {
 
     VERTICAL {
 
+        @Override
         int getThickness(Dimension size) {
             return size.width;
         }
 
+        @Override
         int getLength(Dimension size) {
             return size.height;
         }
 
+        @Override
         int getPosition(Point point) {
             return point.y;
         }
 
+        @Override
         Rectangle updateBoundsPosition(Rectangle bounds, int newPosition) {
             bounds.setLocation(bounds.x, newPosition);
             return bounds;
         }
 
+        @Override
         Rectangle createBounds(Component container, int position, int length) {
             return new Rectangle(0, position, container.getWidth(), length);
         }
 
+        @Override
         Rectangle createCenteredBounds(Component container, int position, int thickness, int length) {
             int x = container.getWidth() / 2 - thickness / 2;
             return new Rectangle(x, position, thickness, length);

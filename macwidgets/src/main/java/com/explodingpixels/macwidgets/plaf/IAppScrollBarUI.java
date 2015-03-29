@@ -48,6 +48,7 @@ public class IAppScrollBarUI extends SkinnableScrollBarUI {
 
     private static ScrollBarSkinProvider createScrollBarSkinProvider() {
         return new ScrollBarSkinProvider() {
+            @Override
             public ScrollBarSkin provideSkin(ScrollBarOrientation orientation) {
                 ScrollBarSkin skin;
                 if (fButtonsSeparate) {

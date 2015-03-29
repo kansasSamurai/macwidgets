@@ -46,74 +46,92 @@ public class SourceListDarkColorScheme implements SourceListColorScheme {
             SourceList.class.getResource(
                     "/com/explodingpixels/macwidgets/images/source_list_white_down_arrow.png"));
 
+    @Override
     public MacWidgetsPainter<Component> getActiveFocusedSelectedItemPainter() {
         return ACTIVE_FOCUSED_SELECTION_PAINTER;
     }
 
+    @Override
     public MacWidgetsPainter<Component> getActiveUnfocusedSelectedItemPainter() {
         return ACTIVE_UNFOCUSED_SELECTION_PAINTER;
     }
 
+    @Override
     public MacWidgetsPainter<Component> getInactiveSelectedItemPainter() {
         return INACTIVE_FOCUSED_SELECTION_PAINTER;
     }
 
+    @Override
     public Color getCategoryTextColor() {
         return CATEGORY_FONT_COLOR;
     }
 
+    @Override
     public Color getCategoryTextShadowColor() {
         return CATEGORY_FONT_SHADOW_COLOR;
     }
 
+    @Override
     public Color getUnselectedItemTextColor() {
         return ITEM_FONT_COLOR;
     }
 
+    @Override
     public Color getSelectedItemTextColor() {
         return SELECTED_ITEM_FONT_COLOR;
     }
 
+    @Override
     public Color getSelectedItemFontShadowColor() {
         return SELECTED_ITEM_FONT_SHADOW_COLOR;
     }
 
+    @Override
     public Color getActiveBackgroundColor() {
         return ACTIVE_BACKGROUND_COLOR;
     }
 
+    @Override
     public Color getInactiveBackgroundColor() {
         return INACTIVE_BACKGROUND_COLOR;
     }
 
+    @Override
     public Icon getUnselectedCollapsedIcon() {
         return COLLAPSED_ICON;
     }
 
+    @Override
     public Icon getUnselectedExpandedIcon() {
         return EXPANDED_ICON;
     }
 
+    @Override
     public Icon getSelectedCollapsedIcon() {
         return COLLAPSED_ICON;
     }
 
+    @Override
     public Icon getSelectedExpandedIcon() {
         return EXPANDED_ICON;
     }
 
+    @Override
     public Color getBadgeTextColor() {
         return getActiveBackgroundColor();
     }
 
+    @Override
     public Color getSelectedBadgeColor() {
         return Color.WHITE;
     }
 
+    @Override
     public Color getActiveUnselectedBadgeColor() {
         return Color.WHITE;
     }
 
+    @Override
     public Color getInativeUnselectedBadgeColor() {
         return Color.WHITE;
     }

@@ -77,6 +77,7 @@ public class HudRadioButtonUI extends BasicRadioButtonUI {
         		fontColor = WidgetBaseColors.LIGHT_FONT_COLOR;
 		}
 
+        @Override
 		public void paintIcon(Component c, Graphics g, int x, int y) {
             AbstractButton button = (AbstractButton) c;
 
@@ -107,10 +108,12 @@ public class HudRadioButtonUI extends BasicRadioButtonUI {
             graphics.fill(dot);
         }
 
+        @Override
         public int getIconWidth() {
             return RADIO_BUTTON_SIZE;
         }
 
+        @Override
         public int getIconHeight() {
             return RADIO_BUTTON_SIZE;
         }

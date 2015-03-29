@@ -109,10 +109,12 @@ public class StripedViewportBorder extends AbstractBorder implements
 		}
 	}
 
+        @Override
 	public void valueChanged(ListSelectionEvent e) {
 		fViewport.repaint();
 	}
 
+        @Override
 	public void propertyChange(PropertyChangeEvent evt) {
 		if (evt.getSource().equals(fTable)) {
 			if (evt.getPropertyName().equals("selectionModel")) {
@@ -130,10 +132,12 @@ public class StripedViewportBorder extends AbstractBorder implements
 
 	private WindowFocusListener createWindowFocusListener() {
 		return new WindowFocusListener() {
+                        @Override
 			public void windowGainedFocus(WindowEvent e) {
 				fViewport.repaint();
 			}
 
+                        @Override
 			public void windowLostFocus(WindowEvent e) {
 				fViewport.repaint();
 			}

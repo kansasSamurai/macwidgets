@@ -49,6 +49,7 @@ public class TableUtils {
     private static PropertyChangeListener createAncestorPropertyChangeListener(
             final JTable table, final Color stipeColor) {
         return new PropertyChangeListener() {
+            @Override
             public void propertyChange(PropertyChangeEvent event) {
                 // indicate that the parent of the JTable has changed.
                 parentDidChange(table, stipeColor);
@@ -151,6 +152,7 @@ public class TableUtils {
             this.fSortDelegate = fSortDelegate;
         }
 
+        @Override
         public void mouseClicked(MouseEvent mouseEvent) {
             if (shouldProcessMouseClicked()) {
                 final TableColumnModel columnModel = fTable.getColumnModel();
@@ -172,6 +174,7 @@ public class TableUtils {
             return fTable.getTableHeader().getCursor() != Cursor.getPredefinedCursor(Cursor.E_RESIZE_CURSOR);
         }
 
+        @Override
         public void mousePressed(MouseEvent mouseEvent) {
             fMouseEventIsPerformingPopupTrigger = mouseEvent.isPopupTrigger();
 

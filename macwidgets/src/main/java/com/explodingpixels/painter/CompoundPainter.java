@@ -19,6 +19,7 @@ public class CompoundPainter<T> implements MacWidgetsPainter<T> {
         fPainters = painters;
     }
 
+    @Override
     public void paint(Graphics2D graphics, T objectToPaint, int width, int height) {
         for (MacWidgetsPainter<T> painter : fPainters) {
             Graphics2D graphicsCopy = (Graphics2D) graphics.create();

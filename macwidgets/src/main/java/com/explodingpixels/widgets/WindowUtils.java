@@ -84,10 +84,12 @@ public class WindowUtils {
 	public static WindowFocusListener createAndInstallRepaintWindowFocusListener(
 			Window window) {
 		WindowFocusListener windowFocusListener = new WindowFocusListener() {
+                        @Override
 			public void windowGainedFocus(WindowEvent e) {
 				e.getWindow().repaint();
 			}
 
+                        @Override
 			public void windowLostFocus(WindowEvent e) {
 				e.getWindow().repaint();
 			}
@@ -161,6 +163,7 @@ public class WindowUtils {
 		final WeakReference<JComponent> weakReference = new WeakReference<JComponent>(
 				component);
 		return new AncestorListener() {
+                        @Override
 			public void ancestorAdded(AncestorEvent event) {
 				// TODO if the WeakReference's object is null, remove the
 				// WeakReference as an
@@ -194,6 +197,7 @@ public class WindowUtils {
 				}
 			}
 
+                        @Override
 			public void ancestorRemoved(AncestorEvent event) {
 				Window window = weakReference.get() == null ? null
 						: SwingUtilities.getWindowAncestor(weakReference.get());
@@ -202,6 +206,7 @@ public class WindowUtils {
 				}
 			}
 
+                        @Override
 			public void ancestorMoved(AncestorEvent event) {
 				// no implementation.
 			}
@@ -215,10 +220,12 @@ public class WindowUtils {
 	private static WindowFocusListener createRepaintWindowListener(
 			final JComponent component) {
 		return new WindowFocusListener() {
+                        @Override
 			public void windowGainedFocus(WindowEvent e) {
 				component.repaint();
 			}
 
+                        @Override
 			public void windowLostFocus(WindowEvent e) {
 				component.repaint();
 			}

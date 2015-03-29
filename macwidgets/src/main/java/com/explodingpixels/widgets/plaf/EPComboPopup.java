@@ -54,14 +54,17 @@ public class EPComboPopup implements ComboPopup {
      */
     private PopupMenuListener createPopupMenuListener() {
         return new PopupMenuListener() {
+            @Override
             public void popupMenuWillBecomeVisible(PopupMenuEvent e) {
                 fComboBox.firePopupMenuWillBecomeVisible();
             }
 
+            @Override
             public void popupMenuWillBecomeInvisible(PopupMenuEvent e) {
                 fComboBox.firePopupMenuWillBecomeInvisible();
             }
 
+            @Override
             public void popupMenuCanceled(PopupMenuEvent e) {
                 fComboBox.firePopupMenuCanceled();
             }
@@ -147,6 +150,7 @@ public class EPComboPopup implements ComboPopup {
 
     private ActionListener createMenuItemListener(final Object comboBoxItem) {
         return new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 fComboBox.setSelectedItem(comboBoxItem);
             }
@@ -174,6 +178,7 @@ public class EPComboPopup implements ComboPopup {
 
     // ComboPopup implementation. /////////////////////////////////////////////////////////////////
 
+    @Override
     public void show() {
         clearAndFillMenu();
         // if there are combo box items, then show the popup menu.
@@ -187,10 +192,12 @@ public class EPComboPopup implements ComboPopup {
         }
     }
 
+    @Override
     public void hide() {
         fPopupMenu.setVisible(false);
     }
 
+    @Override
     public boolean isVisible() {
         return fPopupMenu.isVisible();
     }
@@ -202,10 +209,12 @@ public class EPComboPopup implements ComboPopup {
      *
      * @return null.
      */
+    @Override
     public JList getList() {
         return null;
     }
 
+    @Override
     public MouseListener getMouseListener() {
         return new MouseAdapter() {
             @Override
@@ -222,6 +231,7 @@ public class EPComboPopup implements ComboPopup {
         };
     }
 
+    @Override
     public MouseMotionListener getMouseMotionListener() {
         return new MouseMotionAdapter() {
             @Override
@@ -231,10 +241,12 @@ public class EPComboPopup implements ComboPopup {
         };
     }
 
+    @Override
     public KeyListener getKeyListener() {
         return null;
     }
 
+    @Override
     public void uninstallingUI() {
         // TODO implement, if necessary.
     }
@@ -248,6 +260,7 @@ public class EPComboPopup implements ComboPopup {
     // A default implementation of ComboBoxVerticalCenterProvider. ////////////////////////////////
 
     private static class DefaultVerticalCenterProvider implements ComboBoxVerticalCenterProvider {
+        @Override
         public int provideCenter(JComboBox comboBox) {
             return comboBox.getHeight() / 2;
         }

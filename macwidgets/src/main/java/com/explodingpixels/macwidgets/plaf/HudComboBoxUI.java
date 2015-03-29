@@ -107,6 +107,7 @@ public class HudComboBoxUI extends BasicComboBoxUI {
      */
     private ActionListener createSelectedItemChangedActionListener() {
         return new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 updateDisplayedItem();
             }
@@ -132,6 +133,7 @@ public class HudComboBoxUI extends BasicComboBoxUI {
      */
     private EPComboPopup.ComboBoxVerticalCenterProvider createComboBoxVerticalCenterProvider() {
         return new EPComboPopup.ComboBoxVerticalCenterProvider() {
+            @Override
             public int provideCenter(JComboBox comboBox) {
                 return calculateArrowButtonVisualVerticalCenter();
             }
@@ -144,6 +146,7 @@ public class HudComboBoxUI extends BasicComboBoxUI {
      */
     private ActionListener createComboBoxListener() {
         return new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 updateDisplayedItem();
             }
@@ -156,14 +159,17 @@ public class HudComboBoxUI extends BasicComboBoxUI {
      */
     private PopupMenuListener createPopupMenuListener() {
         return new PopupMenuListener() {
+            @Override
             public void popupMenuWillBecomeVisible(PopupMenuEvent e) {
                 arrowButton.getModel().setPressed(true);
             }
 
+            @Override
             public void popupMenuWillBecomeInvisible(PopupMenuEvent e) {
                 arrowButton.getModel().setPressed(false);
             }
 
+            @Override
             public void popupMenuCanceled(PopupMenuEvent e) {
                 // no implementation.
             }
@@ -283,14 +289,17 @@ public class HudComboBoxUI extends BasicComboBoxUI {
     @Override
     protected LayoutManager createLayoutManager() {
         return new LayoutManager() {
+            @Override
             public void addLayoutComponent(String name, Component comp) {
                 throw new UnsupportedOperationException("This operation is not supported.");
             }
 
+            @Override
             public void removeLayoutComponent(Component comp) {
                 throw new UnsupportedOperationException("This operation is not supported.");
             }
 
+            @Override
             public Dimension preferredLayoutSize(Container parent) {
                 // the combo box's preferred size is the preferred width of the parent and the
                 // preferred height of the arrowButton.
@@ -298,10 +307,12 @@ public class HudComboBoxUI extends BasicComboBoxUI {
                         arrowButton.getPreferredSize().height);
             }
 
+            @Override
             public Dimension minimumLayoutSize(Container parent) {
                 return parent.getMinimumSize();
             }
 
+            @Override
             public void layoutContainer(Container parent) {
                 // make the arrowButton fill the width, and center itself in the available height.
                 int buttonHeight = arrowButton.getPreferredSize().height;

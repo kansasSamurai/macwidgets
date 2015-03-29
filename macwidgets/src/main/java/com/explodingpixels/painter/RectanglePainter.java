@@ -19,6 +19,7 @@ public class RectanglePainter implements MacWidgetsPainter<Component> {
         fFillColor = fillColor;
     }
 
+    @Override
     public void paint(Graphics2D g, Component object, int width, int height) {
         g.setColor(fFillColor);
         g.fillRect(0, 0, width, height);

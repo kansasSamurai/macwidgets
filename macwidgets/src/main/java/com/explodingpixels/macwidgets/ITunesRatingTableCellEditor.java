@@ -21,11 +21,13 @@ public class ITunesRatingTableCellEditor extends AbstractCellEditor implements
 
 	private JComponent component = new RatingStarEditorPanel();
 
+        @Override
 	public Object getCellEditorValue() {
 		int value = ((RatingStarEditorPanel) component).getLevel();
 		return Rating.getRating(value * 20);
 	}
 
+        @Override
 	public Component getTableCellEditorComponent(JTable table, Object value,
 			boolean isSelected, int row, int column) {
 		table.addMouseListener((RatingStarEditorPanel) component);

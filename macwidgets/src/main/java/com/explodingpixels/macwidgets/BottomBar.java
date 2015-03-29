@@ -253,6 +253,7 @@ public class BottomBar {
         
         // MouseMotionListener implementation /////////////////////////////////////////////////////
 
+        @Override
         public void mouseDragged(MouseEvent e) {
             MouseEvent convertedEvent =
                     SwingUtilities.convertMouseEvent(BottomBar.this.getComponent(), e, fSplitPane);
@@ -263,6 +264,7 @@ public class BottomBar {
             fSplitPane.setDividerLocation(boundedNewLocation);
         }
 
+        @Override
         public void mouseMoved(MouseEvent e) {
         }
     }    

@@ -193,6 +193,7 @@ public class HudPaintingUtils {
 
         private ShapeProvider createShapeProvider() {
             return new ShapeProvider() {
+                @Override
                 public Shape createShape(double x, double y, double width, double height) {
                     double arcDiameter = getRoundedDiameter((int) height);
                     return new RoundRectangle2D.Double(x, y, width, height, arcDiameter,

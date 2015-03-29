@@ -81,22 +81,27 @@ public class ButtonsTogetherScrollBarSkin implements ScrollBarSkin {
 
     // ScrollBarSkin implementation. //////////////////////////////////////////////////////////////
 
+    @Override
     public Dimension getMinimumThumbSize() {
         return fMinimumThumbSize;
     }
 
+    @Override
     public Dimension getPreferredSize() {
         return fPreferredSize;
     }
 
+    @Override
     public Rectangle getScrollThumbBounds() {
         return fThumb.getBounds();
     }
 
+    @Override
     public Rectangle getTrackBounds() {
         return fThumbContainer.getBounds();
     }
 
+    @Override
     public void installComponents(JScrollBar scrollBar) {
         // add the components to the scrollbar. order matters here - components added first, are
         // drawn last (on top).
@@ -111,6 +116,7 @@ public class ButtonsTogetherScrollBarSkin implements ScrollBarSkin {
         fThumbContainer.add(fThumb);
     }
 
+    @Override
     public void layoutTrackOnly(JScrollBar scrollBar, ScrollBarOrientation orientation) {
         fCap.setBounds(EMPTY_BOUNDS);
         fIncrementButton.setBounds(EMPTY_BOUNDS);
@@ -121,6 +127,7 @@ public class ButtonsTogetherScrollBarSkin implements ScrollBarSkin {
         fTrack.setBounds(0, 0, r.width, r.height);
     }
 
+    @Override
     public void layoutEverything(JScrollBar scrollBar, ScrollBarOrientation orientation) {
         // 1) layout the scroll bar cap.
         int capLength = orientation.getLength(fCap.getPreferredSize());
@@ -154,12 +161,14 @@ public class ButtonsTogetherScrollBarSkin implements ScrollBarSkin {
         fThumbContainer.setBounds(trackAndThumbBounds);
     }
 
+    @Override
     public void installMouseListenersOnButtons(MouseListener decrementMoustListener,
                                                MouseListener incrementMouseListener) {
         fDecrementButton.addMouseListener(decrementMoustListener);
         fIncrementButton.addMouseListener(incrementMouseListener);
     }
 
+    @Override
     public void setScrollThumbBounds(Rectangle bounds) {
         fThumb.setBounds(bounds);
     }

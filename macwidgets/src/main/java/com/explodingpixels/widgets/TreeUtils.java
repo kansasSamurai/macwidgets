@@ -120,6 +120,7 @@ public class TreeUtils {
 
     public static void expandPathOnEdt(final JTree tree, final TreePath path) {
         SwingUtilities.invokeLater(new Runnable() {
+            @Override
             public void run() {
             	if ((tree == null) || (path == null))
             		return;
@@ -130,6 +131,7 @@ public class TreeUtils {
 
     public static void collapsePathOnEdt(final JTree tree, final TreePath path) {
         SwingUtilities.invokeLater(new Runnable() {
+            @Override
             public void run() {
             	if ((tree == null) || (path == null))
                 	return;
@@ -143,9 +145,11 @@ public class TreeUtils {
 
         TreeModelListener listener = new TreeModelListener() {
 
+            @Override
             public void treeNodesChanged(TreeModelEvent e) {
             }
 
+            @Override
             public void treeNodesInserted(TreeModelEvent e) {
                 // if this is the root node, and it hasn't yet been expanded
                 // (because no children have been added, then expand the root now).
@@ -155,9 +159,11 @@ public class TreeUtils {
                 }
             }
 
+            @Override
             public void treeNodesRemoved(TreeModelEvent e) {
             }
 
+            @Override
             public void treeStructureChanged(TreeModelEvent e) {
             }
         };

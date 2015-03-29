@@ -179,6 +179,7 @@ public class HudWindow {
 
     private PropertyChangeListener createTitlePropertyChangeListener() {
         return new PropertyChangeListener() {
+            @Override
             public void propertyChange(PropertyChangeEvent evt) {
                 fTitlePanel.setTitle(fDialog.getTitle());
             }
@@ -187,6 +188,7 @@ public class HudWindow {
 
     private ActionListener createCloseButtonActionListener() {
         return new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 // simulate clicking the "real" close button on a window.
                 fDialog.dispatchEvent(new WindowEvent(fDialog, WindowEvent.WINDOW_CLOSING));

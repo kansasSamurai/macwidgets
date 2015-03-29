@@ -35,10 +35,12 @@ public class FocusStateMatteBorder extends MatteBorder {
 
     private WindowFocusListener createWindowFocusListener() {
         return new WindowFocusListener() {
+            @Override
             public void windowGainedFocus(WindowEvent e) {
                 updateColor(true);
             }
 
+            @Override
             public void windowLostFocus(WindowEvent e) {
                 updateColor(false);
             }

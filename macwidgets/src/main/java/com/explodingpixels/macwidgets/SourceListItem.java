@@ -58,6 +58,7 @@ public class SourceListItem implements TextProvider, IconProvider, SourceListBad
      *
      * @return the text to use for this item.
      */
+    @Override
     public String getText() {
         return fText;
     }
@@ -80,6 +81,7 @@ public class SourceListItem implements TextProvider, IconProvider, SourceListBad
      *
      * @return the icon to use for this item.
      */
+    @Override
     public Icon getIcon() {
         return fIcon;
     }
@@ -105,6 +107,7 @@ public class SourceListItem implements TextProvider, IconProvider, SourceListBad
      *
      * @return the counter value to use for this item.
      */
+    @Override
     public int getCounterValue() {
         return fCounterValue;
     }
@@ -112,6 +115,7 @@ public class SourceListItem implements TextProvider, IconProvider, SourceListBad
     /**
      * {@inheritDoc}
      */
+    @Override
     public String getBadgeValue() {
     	return "" +  fCounterValue;
     }

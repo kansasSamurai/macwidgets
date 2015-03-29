@@ -67,74 +67,92 @@ public class WidgetStandardColorScheme implements WidgetColorScheme {
     private static final MacWidgetsPainter<Component> INACTIVE_FOCUSED_SELECTION_PAINTER =
             createSourceListInactiveSelectionPainter();
 
+    @Override
     public MacWidgetsPainter<Component> getActiveFocusedSelectedItemPainter() {
         return ACTIVE_FOCUSED_SELECTION_PAINTER;
     }
 
+    @Override
     public MacWidgetsPainter<Component> getActiveUnfocusedSelectedItemPainter() {
         return ACTIVE_UNFOCUSED_SELECTION_PAINTER;
     }
 
+    @Override
     public MacWidgetsPainter<Component> getInactiveSelectedItemPainter() {
         return INACTIVE_FOCUSED_SELECTION_PAINTER;
     }
 
+    @Override
     public Color getCategoryTextColor() {
         return CATEGORY_FONT_COLOR;
     }
 
+    @Override
     public Color getCategoryTextShadowColor() {
         return CATEGORY_FONT_SHADOW_COLOR;
     }
 
+    @Override
     public Color getUnselectedItemTextColor() {
         return ITEM_FONT_COLOR;
     }
 
+    @Override
     public Color getSelectedItemTextColor() {
         return SELECTED_ITEM_FONT_COLOR;
     }
 
+    @Override
     public Color getSelectedItemFontShadowColor() {
         return SELECTED_ITEM_FONT_SHADOW_COLOR;
     }
 
+    @Override
     public Color getActiveBackgroundColor() {
         return ACTIVE_BACKGROUND_COLOR;
     }
 
+    @Override
     public Color getInactiveBackgroundColor() {
         return INACTIVE_BACKGROUND_COLOR;
     }
 
+    @Override
     public Icon getUnselectedCollapsedIcon() {
         return UNSELECTED_COLLAPSED_ICON;
     }
 
+    @Override
     public Icon getUnselectedExpandedIcon() {
         return UNSELECTED_EXPANDED_ICON;
     }
 
+    @Override
     public Icon getSelectedCollapsedIcon() {
         return SELECTED_COLLAPSED_ICON;
     }
 
+    @Override
     public Icon getSelectedExpandedIcon() {
         return SELECTED_EXPANDED_ICON;
     }
 
+    @Override
     public Color getBadgeTextColor() {
         return BADGE_TEXT_COLOR;
     }
 
+    @Override
     public Color getSelectedBadgeColor() {
         return BADGE_SELECTED_COLOR;
     }
 
+    @Override
     public Color getActiveUnselectedBadgeColor() {
         return BADGE_ACTIVE_UNSELECTED_COLOR;
     }
 
+    @Override
     public Color getInativeUnselectedBadgeColor() {
         return BADGE_INACTIVE_UNSELECTED_COLOR;
     }

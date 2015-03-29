@@ -25,6 +25,7 @@ public class ImagePainter implements MacWidgetsPainter<Component> {
 
     }
 
+    @Override
     public void paint(Graphics2D graphics, Component objectToPaint, int width, int height) {
         graphics.drawImage(fImage, 0, 0, width, height, null);
     }

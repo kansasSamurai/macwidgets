@@ -109,10 +109,12 @@ public class ITunesTableUI extends BasicTableUI {
 
 	private WindowFocusListener createWindowFocusListener() {
 		return new WindowFocusListener() {
+                        @Override
 			public void windowGainedFocus(WindowEvent e) {
 				makeTableActive();
 			}
 
+                        @Override
 			public void windowLostFocus(WindowEvent e) {
 				makeTableInactive();
 			}

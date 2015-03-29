@@ -35,6 +35,7 @@ public class RatingStarEditorPanel
     private int yoffset = 2;
 
 
+    @Override
     public void mouseClicked(MouseEvent e) {
         processCoordinates(e);
         repaint();
@@ -68,6 +69,7 @@ public class RatingStarEditorPanel
         return true;
     }
 
+    @Override
     public void mousePressed(MouseEvent e) {
         processCoordinates(e);
         repaint();
@@ -82,15 +84,18 @@ public class RatingStarEditorPanel
         }
     }
 
+    @Override
     public void mouseReleased(MouseEvent e) {
         processCoordinates(e);
         repaint();
     }
 
+    @Override
     public void mouseEntered(MouseEvent e) {
 
     }
 
+    @Override
     public void mouseExited(MouseEvent e) {
 
     }
@@ -127,11 +132,13 @@ public class RatingStarEditorPanel
         }
     }
 
+    @Override
     public void mouseDragged(MouseEvent e) {
         processCoordinates(e);
         repaint();
     }
 
+    @Override
     public void mouseMoved(MouseEvent e) {
         //To change body of implemented methods use File | Settings | File Templates.
     }
