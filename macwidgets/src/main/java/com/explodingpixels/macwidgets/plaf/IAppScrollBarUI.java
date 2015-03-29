@@ -2,8 +2,6 @@ package com.explodingpixels.macwidgets.plaf;
 
 import java.awt.Component;
 import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.FontMetrics;
 import java.awt.Image;
 
 import javax.swing.AbstractButton;

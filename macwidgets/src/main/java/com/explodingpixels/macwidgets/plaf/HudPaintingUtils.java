@@ -14,7 +14,6 @@ import java.awt.geom.RoundRectangle2D;
 
 import javax.swing.AbstractButton;
 import javax.swing.JComponent;
-import javax.swing.UIManager;
 
 import com.explodingpixels.macwidgets.MacFontUtils;
 import com.explodingpixels.macwidgets.WidgetBaseColors;

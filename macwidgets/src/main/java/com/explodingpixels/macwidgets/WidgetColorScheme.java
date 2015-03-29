@@ -5,7 +5,6 @@ import java.awt.Component;
 
 import javax.swing.Icon;
 
-import com.explodingpixels.macwidgets.SourceList;
 import com.explodingpixels.painter.MacWidgetsPainter;
 
 /**
