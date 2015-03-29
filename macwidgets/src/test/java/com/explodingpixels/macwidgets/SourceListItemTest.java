@@ -3,7 +3,7 @@ package com.explodingpixels.macwidgets;
 import org.junit.Test;
 import org.junit.Assert;
 
-public class TSourceListItem {
+public class SourceListItemTest {
 
     @Test
     public void testContains() {

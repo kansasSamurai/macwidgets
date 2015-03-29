@@ -3,7 +3,7 @@ package com.explodingpixels.macwidgets;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TSourceListModel {
+public class SourceListModelTest {
 
     @Test
     public void testCategoryAddedAndRemoved() {
